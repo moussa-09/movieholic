@@ -10,6 +10,7 @@ export default function TopMovies(){
     Axios.get(`/database/topRated`)
     .then((res) => {
         if(res){
+          console.log(res);
             setItems(res.data);
             setIsLoaded(true);
         }else{
