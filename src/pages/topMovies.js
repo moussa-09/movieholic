@@ -7,7 +7,7 @@ export default function TopMovies(){
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    Axios.get(`${window.location.protocol}//${window.location.hostname}/database/topRated`)
+    Axios.get(`/database/topRated`)
     .then((res) => {
         if(res){
             setItems(res.data);
