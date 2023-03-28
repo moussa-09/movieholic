@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: `http://localhost:${process.env.port || 5000}`,
+      target: `https://movieholic.onrender.com/${process.env.port || 5000}`,
       changeOrigin: true,
     })
   );
